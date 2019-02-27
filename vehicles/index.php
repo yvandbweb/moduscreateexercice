@@ -27,7 +27,6 @@ class modus{
             $results["Results"]=array();
             foreach ($json["Results"] as $res){
                  if ($withrating==true){
-                     $urlrate="urlVehiculeRated";
                      $rating=$this->getJsonContent(str_replace("vehicleid1",$res["VehicleId"],self::urlVehiculeRated));  
                      $results["Results"][$i]["CrashRating"]=$rating["Results"][0]["OverallRating"];                    
                  }                
