@@ -49,18 +49,5 @@ class carlistFactory{
        return $json;
     }    
     
-    
-
-    
-    public function requirementTwo($withrating){
-       $url=str_replace("year1",$_POST["modelYear"],self::url1);      
-       $url=str_replace("manufacturer1",$_POST["manufacturer"],$url);     
-       $url=str_replace("model1",$_POST["model"],$url);       
-       $json=$this->getJsonContent($url);       
-       $this->getJsonOutput($json,$withrating);
-       
-       return true;
-       
-    }    
 }
 
